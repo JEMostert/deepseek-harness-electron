@@ -36,6 +36,14 @@ pnpm dsh web
 
 `pnpm run build` 会准备仓库产物。`pnpm dsh web` 会直接使用这些已构建产物，不会重新构建。
 
+若要在原生窗口中使用同一套 GUI，而不是默认浏览器：
+
+```sh
+pnpm run desktop
+```
+
+`pnpm run desktop` 会以 `--no-open` 启动 web 宿主，并在 Electron 中加载它。额外的 web flag 写在 `--` 之后（`pnpm run desktop -- --port 8080`）。详见 [`apps/electron`](apps/electron/README.md)。
+
 ## 社区与支持
 
 - 欢迎通过 [GitHub Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions) 提交反馈或 bug 报告。

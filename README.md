@@ -36,6 +36,14 @@ pnpm dsh web
 
 `pnpm run build` prepares the repository artifacts. `pnpm dsh web` uses those built artifacts without rebuilding.
 
+To use the same GUI in a native window instead of the default browser:
+
+```sh
+pnpm run desktop
+```
+
+`pnpm run desktop` starts the web host with `--no-open` and loads it in Electron. Extra web flags go after `--` (`pnpm run desktop -- --port 8080`). See [`apps/electron`](apps/electron/README.md).
+
 ## Community and support
 
 - Feel free to submit feedback or bug reports through [GitHub Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions).
